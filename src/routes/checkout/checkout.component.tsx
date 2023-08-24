@@ -1,9 +1,10 @@
-import {React} from 'react';
+import {FC} from 'react';
 import { useSelector } from 'react-redux';
 import CheckOutItem from '../../components/checkout-item/checkout-item.component';
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
-import {Total, CheckoutContainer, CheckoutHeader, HeaderBlock}from './checkout.styles.jsx';
+import {Total, CheckoutContainer, CheckoutHeader, HeaderBlock}from './checkout.styles';
 import { PaymentForm } from '../../components/payment-form/payment-form.component';
+
 
 const CheckOut = () => {
     const cartItems = useSelector(selectCartItems);
