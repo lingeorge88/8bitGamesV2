@@ -5,7 +5,7 @@ import  { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import { useSelector } from 'react-redux';
 import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector'
-import { PaymentFormContainer, FormContainer, PaymentButton } from './payment-form.styles';
+import { PaymentFormContainer, FormContainer, PaymentButton, StyledCardElementContainer } from './payment-form.styles';
 
 const ifValidCardElement = (card: StripeCardElement | null): card is StripeCardElement => card !== null;
 
@@ -59,7 +59,9 @@ export const PaymentForm = () => {
     <PaymentFormContainer>
         <FormContainer onSubmit={paymentHandler}>
             <h2>Credit Card Payment: </h2>
+            <StyledCardElementContainer>
             <CardElement className='cardElement'/>
+            </StyledCardElementContainer>
             <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}> Pay Now </PaymentButton>
         </FormContainer>
     </PaymentFormContainer>
