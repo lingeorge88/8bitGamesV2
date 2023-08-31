@@ -5,7 +5,7 @@ export const CategoryContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 50px;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 980px) {
         align-items: center;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 15px;
