@@ -38,7 +38,7 @@ width: 100%;
       }
     }
 
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 980px){
       width: 40vw;
       button {
         display: block;

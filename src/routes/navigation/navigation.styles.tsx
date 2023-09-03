@@ -26,7 +26,7 @@ export const LogoContainer = styled(Link)`
   width: 80px;
   padding: 5px;
 
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 980px){
     width: 60px; 
     padding: 0;
   }

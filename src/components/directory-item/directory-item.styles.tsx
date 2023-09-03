@@ -31,7 +31,7 @@ export const Body = styled.div`
       font-size: 20px;
       color: #4a4a4a;
       text-transform: uppercase;
-      text-align:center;
+      text-align: center;
     }
 
     p {
@@ -39,7 +39,7 @@ export const Body = styled.div`
       font-size: 16px;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px){
        h2 {
         font-size: 13.5px;
       }
@@ -85,8 +85,9 @@ border-radius: 3px;
     margin-left: 7.5px;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px){
     height: 200px;
+    
   }
   
 `

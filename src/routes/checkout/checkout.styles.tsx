@@ -7,7 +7,7 @@ width: 55%;
     flex-direction: column;
     align-items: center;
     margin: 50px auto 0;
-    @media screen and (max-width: 980px) and (min-width: 400px) {
+    @media screen and (max-width: 980px) {
       width: 90%; 
   }
 `
@@ -18,7 +18,7 @@ export const CheckoutHeader = styled.div`
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid darkgrey;
-      @media screen and (max-width: 980px) and (min-width: 400px) {
+      @media screen and (max-width: 1480px) {
         flex-direction: column; 
         align-items: center; 
     }
@@ -31,7 +31,7 @@ export const HeaderBlock = styled.div`
   &:last-child {
     width: 8%;
   }
-  @media screen and (max-width: 980px) and (min-width: 400px) {
+  @media screen and (max-width: 1480px) {
     width: 100%; 
     margin-bottom: 5px; 
     text-align: center; 
@@ -45,7 +45,7 @@ export const Total = styled.span`
       margin-top: 30px;
       margin-left: auto;
       font-size: 36px;
-      @media screen and (max-width: 980px) and (min-width: 400px) {
+      @media screen and (max-width: 980px){
         font-size: 28px;
     }
 `
