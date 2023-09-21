@@ -6,7 +6,7 @@ width: 900px;
 justify-content: space-between;
 margin: 30px auto;
 
-@media screen and (max-width: 800px) and (min-width: 390px){
+@media screen and (max-width: 800px){
     flex-direction: column;
   }
 `
