@@ -11,6 +11,7 @@ import {
   LogoContainer,
   NavLinks,
   NavLink,
+  StyledHeading
 } from './navigation.styles';
 import { signOutStart } from '../../store/user/user.action';
 
@@ -26,8 +27,8 @@ const Navigation = () => {
         <LogoContainer to='/'>
           <CtrlLogo />
         </LogoContainer>
+        <StyledHeading> RETRO RUSH </StyledHeading>
         <NavLinks>
-        
           <NavLink to='/shop' className='shop-button nes-btn is-success'>SHOP</NavLink>
 
           {currentUser ? (
@@ -39,6 +40,7 @@ const Navigation = () => {
           )}
           <CartIcon />
         </NavLinks>
+        
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />

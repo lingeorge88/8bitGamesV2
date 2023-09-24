@@ -1,11 +1,12 @@
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useNavigate } from 'react-router-dom';
 import { useState, FormEvent } from 'react';
 import { StripeCardElement } from '@stripe/stripe-js';
 import  { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import { useSelector } from 'react-redux';
 import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector'
-import { PaymentFormContainer, FormContainer, PaymentButton, StyledCardElementContainer } from './payment-form.styles';
+import { PaymentFormContainer, FormContainer, PaymentButton, StyledCardElementContainer, cardElementStyles, PaymentFormInput } from './payment-form.styles';
 
 const ifValidCardElement = (card: StripeCardElement | null): card is StripeCardElement => card !== null;
 
@@ -15,6 +16,11 @@ export const PaymentForm = () => {
     const amount = useSelector(selectCartTotal);
     const currentUser = useSelector(selectCurrentUser);
     const [ isProcessingPayment, setIsProcessingPayment] = useState(false);
+    const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [address, setAddress] = useState("");
+    const [zip, setZip] = useState("");
+    const navigate = useNavigate();
 
     const paymentHandler = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -50,7 +56,13 @@ export const PaymentForm = () => {
         alert(paymentResult.error)
       } else {
         if(paymentResult.paymentIntent.status === 'succeeded'){
-          alert('Payment Successful');
+          setFullName("");
+    setEmail("");
+    setAddress("");
+    setZip("");
+
+    // Navigate to a success page
+    navigate('/success', { state: { name: fullName } });
         }
       }
     }
@@ -58,12 +70,28 @@ export const PaymentForm = () => {
     return (
     <PaymentFormContainer>
         <FormContainer onSubmit={paymentHandler}>
-            <h2>Credit Card Payment: </h2>
-            <StyledCardElementContainer>
-            <CardElement className='cardElement'/>
-            </StyledCardElementContainer>
-            <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}> Pay Now </PaymentButton>
-        </FormContainer>
+        <h2>Credit Card Payment: </h2>
+
+        <PaymentFormInput label="Name on Card" type="text" id="fullName"  value={fullName} 
+            onChange={(e) => setFullName(e.target.value)} 
+            required />
+        <PaymentFormInput label="Email" type="email" id="email"  value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required />
+
+    <StyledCardElementContainer>
+      <CardElement options={cardElementStyles} className='cardElement'/>
+      </StyledCardElementContainer>
+
+      <PaymentFormInput label="Billing Address" type="text" id="address" value={address}
+            onChange={(e) => setAddress(e.target.value)} required />
+
+      <PaymentFormInput label="Postal Code" type= "num" id="zip" value={zip}
+            onChange={(e) => setZip(e.target.value)}  required />
+   
+
+        <PaymentButton isLoading={isProcessingPayment} buttonType={BUTTON_TYPE_CLASSES.inverted}> Pay Now </PaymentButton>
+    </FormContainer>
     </PaymentFormContainer>
     )
 }

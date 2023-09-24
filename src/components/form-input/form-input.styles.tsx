@@ -4,7 +4,7 @@ const subColor = 'grey';
 const mainColor = 'black';
 
 export const shrinkLabelStyles = css`
-  top: -14px;
+  top: -16px;
   font-size: 12px;
   color: ${mainColor};
 `
@@ -18,7 +18,7 @@ color: ${subColor};
     font-weight: normal;
     position: absolute;
     pointer-events: none;
-    left: 5px;
+    left: 10px;
     top: 10px;
     transition: 300ms ease all;
 
