@@ -7,6 +7,7 @@ export const NavigationContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  text-align:center;
 
   @media screen and (max-width: 800px){
     height: 60px;
@@ -18,6 +19,16 @@ export const NavigationContainer = styled.div`
     padding: 5px 10px;  
     margin-bottom: 20px;
     flex-wrap: wrap;  
+  }
+`;
+
+
+export const StyledHeading = styled.h1`
+    flex: 1;  // Allow the heading to take available space
+    text-align: center;
+    margin: 0;
+    @media screen and (max-width: 900px) {
+      display: none;
   }
 `;
 

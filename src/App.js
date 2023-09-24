@@ -5,11 +5,13 @@ import { checkUserSession } from './store/user/user.action';
 import "nes.css/css/nes.min.css";
 import { Spinner } from './components/spinner/spinner.component';
 import { GlobalStyle } from './global.styles';
+import {PaymentSuccess} from './routes/paymentPage/paymentSuccess.component';
 const Home = lazy(() => import('./routes/home/home.component'));
 const Authentication = lazy(()=> import('./routes/authentication/authentication.component'));
 const Navigation = lazy(()=> import('./routes/navigation/navigation.component'));
 const Shop = lazy(()=> import('./routes/shop/shop.component'));
 const CheckOut = lazy(()=> import('./routes/checkout/checkout.component'));
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,7 +29,8 @@ const App = () => {
         <Route path = '/auth' element= {<Authentication />}/>
         <Route path = '/shop/*' element ={<Shop />}/>
         <Route path = '/checkout' element = {<CheckOut />}/>
-      </Route>
+        <Route path = '/success' element = {<PaymentSuccess />}/>
+        </Route>
       </Routes>
     </Suspense>
     )

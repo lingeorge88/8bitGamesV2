@@ -1,12 +1,27 @@
 import styled from 'styled-components';
 import Button  from '../button/button.component'
+import FormInput from '../form-input/form-input.component';
+
+export const PaymentFormInput = styled(FormInput)`
+        border: 4px solid black;  
+        border-radius: 5px; 
+        margin: 4px 0;
+        padding: 0.8rem;
+        color:black;
+
+        & label {  // Targeting the label inside PaymentFormInput
+            left: 10px;
+            
+        }
+`;
 
 export const PaymentFormContainer = styled.div`
-height: 300px;
+height: 500px;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-contnet: center;
+padding-bottom: 500px;
 
 @media screen and (max-width: 800px) {
     width: 100%; 
@@ -22,8 +37,8 @@ min-width: 500px;
     }
 
     @media screen and (max-width: 800px) {
-        width: 100%; // Ensures it takes the full width on smaller screens
-        min-width: unset; // Removes the minimum width requirement
+        width: 100%; 
+        min-width: unset; 
     }
 `
 export const PaymentButton = styled(Button)`
@@ -37,12 +52,47 @@ background: linear-gradient(90deg, rgba(182,140,187,0.9864320728291317) 0%, rgba
 color: white;
 height: 60%;
 @media screen and (max-width: 800px) {
-    width: 90%; // Adjust as needed for smaller screens
-    margin-left: 5%; // Center the button with equal margins on both sides
+    width: 90%; 
+    margin-left: 5%; 
     margin-right: 5%;
 }
 `
 
 export const StyledCardElementContainer = styled.div`
-    margin-top: 20px;
+width: 100%;
+padding: 1rem;  // Provide space inside the Stripe Card container
+    border: 4px solid black;  // Match border with PaymentFormInput
+    border-radius: 4px;
+font-size: 16px;
+margin: 4px 0;
+transition: border-color 0.3s ease;
+
+&:focus {
+    border-color: #007bff;  // Change to a color that matches your theme
+    outline: none;
+}
+
+&::placeholder {
+    color: #888;
+}
+margin-top: 20px; // Keep your margin-top value
 `;
+
+
+export const cardElementStyles = {
+    style: {
+        base: {
+            color: '#32325d',
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+                color: '#aab7c4'
+            }
+        },
+        invalid: {
+            color: '#fa755a',
+            iconColor: '#fa755a'
+        }
+    }
+};
