@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { MessageDiv, MessageContainer, CenteredContainer } from './paymentSuccess.styles';
 
-export const PaymentSuccess: React.FC = () => {
+const PaymentSuccess: React.FC = () => {
   const location = useLocation();
     const name = location.state?.name || 'Guest';
 
@@ -19,3 +19,5 @@ export const PaymentSuccess: React.FC = () => {
       </CenteredContainer >
   );
 }
+
+export default PaymentSuccess;
