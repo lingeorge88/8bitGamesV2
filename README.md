@@ -25,6 +25,8 @@
 ## Description
 Retro Rush is a personal ReactJS project that mimicks a modern E-commerce website with throwback 8-bit graphics.  
 
+This repository is migrated from a prior repository due to conflicting dependencies leading to failed deployment, see the previous version here: (https://github.com/lingeorge88/E_commerceReact)
+
 ![Screenshot](./src/assets/RetroRush.png)
 
 
