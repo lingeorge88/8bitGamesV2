@@ -5,7 +5,7 @@ import { checkUserSession } from './store/user/user.action';
 import "nes.css/css/nes.min.css";
 import { Spinner } from './components/spinner/spinner.component';
 import { GlobalStyle } from './global.styles';
-import {PaymentSuccess} from './routes/paymentPage/paymentSuccess.component';
+const PaymentSuccess = lazy(() => import('./routes/paymentPage/paymentSuccess.component'));
 const Home = lazy(() => import('./routes/home/home.component'));
 const Authentication = lazy(()=> import('./routes/authentication/authentication.component'));
 const Navigation = lazy(()=> import('./routes/navigation/navigation.component'));
