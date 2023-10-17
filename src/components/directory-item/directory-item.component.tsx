@@ -14,7 +14,7 @@ const DirectoryItem:FC<DirectoryItemProps> = ({ category }) => {
   const onNavigateHandler = () => navigate(route);
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
-      <BackgroundImage imageUrl={imageUrl}
+      <BackgroundImage data-testid="background-image" imageUrl={imageUrl}
       />
       <Body>
         <h2>{title}</h2>
