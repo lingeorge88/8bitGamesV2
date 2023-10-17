@@ -46,7 +46,7 @@ const categories:DirectoryCategory[] = [
 const Directory = () => {
 
   return (
-    <DirectoryContainer>
+    <DirectoryContainer data-testid='directory-item'>
       {categories.map((category) => (
         <DirectoryItem key={category.id} category={category} />
       ))}

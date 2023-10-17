@@ -112,7 +112,7 @@ const SHOP_DATA = [
       {
         id: 18,
         name: 'ORIGINAL CONTROLLER - NINTENDO NES',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/640w/products/16331/25927/Original_Controller__34879.1689100645.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/51dkSePKwaL.jpg',
         price: 25,
       },
       {
