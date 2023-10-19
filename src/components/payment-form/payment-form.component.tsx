@@ -61,7 +61,7 @@ export const PaymentForm = () => {
     setAddress("");
     setZip("");
 
-    // Navigate to a success page
+    
     navigate('/success', { state: { name: fullName } });
         }
       }
