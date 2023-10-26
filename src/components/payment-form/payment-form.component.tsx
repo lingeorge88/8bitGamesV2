@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useState, FormEvent } from 'react';
 import { StripeCardElement } from '@stripe/stripe-js';
 import  { BUTTON_TYPE_CLASSES } from '../button/button.component';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector'
 import { PaymentFormContainer, FormContainer, PaymentButton, StyledCardElementContainer, cardElementStyles, PaymentFormInput } from './payment-form.styles';
+import { emptyCart } from '../../store/cart/cart.action';
 
 const ifValidCardElement = (card: StripeCardElement | null): card is StripeCardElement => card !== null;
 
@@ -21,7 +22,7 @@ export const PaymentForm = () => {
     const [address, setAddress] = useState("");
     const [zip, setZip] = useState("");
     const navigate = useNavigate();
-
+    const dispatch = useDispatch();
     const paymentHandler = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     if(!stripe || !elements) {
@@ -60,7 +61,7 @@ export const PaymentForm = () => {
     setEmail("");
     setAddress("");
     setZip("");
-
+    dispatch(emptyCart());
     
     navigate('/success', { state: { name: fullName } });
         }
