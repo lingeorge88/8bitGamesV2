@@ -8,7 +8,6 @@ export type SetIsCartOpen = ActionWithPayload<CART_ACTION_TYPES.SET_IS_CART_OPEN
 export type SetCartItems = ActionWithPayload<CART_ACTION_TYPES.SET_CART_ITEMS, CartItem[]>;
 
 
-
 export const setIsCartOpen = withMatcher((boolean: boolean): SetIsCartOpen => 
 createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, boolean));
 
@@ -67,4 +66,9 @@ export const addCartItem = (cartItems: CartItem[], productToAdd: CategoryItem): 
   export const clearCartItem = (cartItems:CartItem[], cartItemToClear: CartItem): CartItem[] => {
     return cartItems.filter(cartItem => cartItem.id !== cartItemToClear.id);
   };
+  export const clearAllCart = withMatcher((): SetCartItems =>
+    createAction(CART_ACTION_TYPES.SET_CART_ITEMS, [])
+  );
+
+  export const emptyCart = (): SetCartItems => clearAllCart();
   
