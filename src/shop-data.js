@@ -153,7 +153,7 @@ const SHOP_DATA = [
       {
         id: 24,
         name: 'SPYRO SKYLANDERS LOOSE FIGURE',
-        imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ebay.com%2Fitm%2F185688980163&psig=AOvVaw0QEW9T11g1aAx6ynCNhTHZ&ust=1700622251930000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCapNuN1IIDFQAAAAAdAAAAABAR',
+        imageUrl: 'https://thumbs.coleka.com/media/item/20160207/skylanders-elite-spyro_470x246.webp',
         price: 20,
       },
       {
