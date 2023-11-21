@@ -153,7 +153,7 @@ const SHOP_DATA = [
       {
         id: 24,
         name: 'SPYRO SKYLANDERS LOOSE FIGURE',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/53559/58243/soptyr------------2__04456.1684585716.gif',
+        imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ebay.com%2Fitm%2F185688980163&psig=AOvVaw0QEW9T11g1aAx6ynCNhTHZ&ust=1700622251930000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKCapNuN1IIDFQAAAAAdAAAAABAR',
         price: 20,
       },
       {
@@ -194,7 +194,7 @@ const SHOP_DATA = [
       {
         id: 32,
         name: 'DKOLDIES EMBROIDERED LOGO HAT',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/640w/products/48694/46567/hat-----1__63597.1668194112.jpg',
+        imageUrl: 'https://i.etsystatic.com/25718756/r/il/067845/4229909408/il_570xN.4229909408_gy7z.jpg',
         price: 25,
       },
       {
