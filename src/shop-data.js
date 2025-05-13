@@ -59,7 +59,7 @@ const SHOP_DATA = [
       {
         id: 10,
         name: 'HALO- XBOX',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/640w/products/21086/56898/halo-----------------1__00201.1687874519.jpg',
+        imageUrl: 'https://media.gamestop.com/i/gamestop/10152638_ALT01/Halo-Combat-Evolved---Xbox',
         price: 20,
       },
       {
@@ -71,7 +71,7 @@ const SHOP_DATA = [
       {
         id: 12,
         name: 'NBA JAM TOURNAMENT EDITION - GENESIS GAME',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/23429/14712/Game%20Genesis-309-2__48673.1686852336.jpg',
+        imageUrl: 'https://media.gamestop.com/i/gamestop/10122636/NBA-Jam---Sega-Genesis',
         price: 19,
       },
       {
@@ -83,7 +83,7 @@ const SHOP_DATA = [
       {
         id: 14,
         name: 'LEGEND OF ZELDA GOLD - NES GAME',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/24232/33278/zeldagold__37469.1689775904.jpg',
+        imageUrl: 'https://media.gamestop.com/i/gamestop/10122505/The-Legend-of-Zelda-Ocarina-of-Time---Nintendo-64?$pdp$',
         price: 16,
       },
       {
@@ -118,13 +118,13 @@ const SHOP_DATA = [
       {
         id: 19,
         name: 'SUPER SCOPE - SNES GUN BUNDLE',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280x1280/products/16368/9171/Acc-SNES-Super-Scope-2__00375.1683737645.jpg',
+        imageUrl: 'https://mario.wiki.gallery/images/8/89/Gal_nintendo_13_super-scope.jpg',
         price: 90,
       },
       {
         id: 20,
         name: 'ORIGINAL RUMBLE PAK - NINTENDO 64 (N64)',
-        imageUrl: 'https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/640w/products/16291/9082/Acc-N64-OrigRumble-2__47194.1683981209.gif',
+        imageUrl: 'https://m.media-amazon.com/images/I/41Q+EWATq1L._AC_UF1000,1000_QL80_.jpg',
         price: 90,
       },
       {
